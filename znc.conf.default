@@ -8,7 +8,7 @@
 // But if you feel risky, you might want to read help on /znc saveconfig and /znc rehash.
 // Also check http://en.znc.in/wiki/Configuration
 
-Version = 1.6.3
+Version = 1.7.5
 <Listener web>
 		Port = 8080
 		IPv4 = true
