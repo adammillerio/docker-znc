@@ -50,7 +50,7 @@ RUN mkdir -p src \
 	&& wget "https://github.com/adammillerio/znc-contrib/archive/master.tar.gz" \
 	&& tar -zxf "master.tar.gz" \
 	&& cd "znc-contrib-master" \
-	&& MODDIR=/tmp make clientaway \
+	&& make clientaway \
 	&& cp clientaway.so "/usr/local/lib/znc/" \
 	&& rm -rf /src*
 
