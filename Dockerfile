@@ -44,6 +44,16 @@ RUN mkdir -p src \
 	&& cp palaver.so "/usr/local/lib/znc/" \
 	&& rm -rf /src*
 
+# Build and install clientaway
+RUN mkdir -p src \
+	&& cd /src \
+	&& wget "https://github.com/adammillerio/znc-contrib/archive/master.tar.gz" \
+	&& tar -zxf "master.tar.gz" \
+	&& cd "znc-contrib-master" \
+	&& MODDIR=/tmp make clientaway \
+	&& cp clientaway.so "/usr/local/lib/znc/" \
+	&& rm -rf /src*
+
 # Add the default configuration and startup script
 ADD start.sh /start.sh
 ADD znc.conf.default /znc.conf.default
